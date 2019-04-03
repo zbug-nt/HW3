@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="TipCalculator" Height="450" Width="800">
+    <Grid x:Name="mainGrid">
+        <Label Content="Enter the Bill Amount" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48"/>
+        <Label Content="Bill Amount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="148,88,0,0" FontSize="24"/>
+        <TextBox x:Name="billAmountTextBox"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 TextWrapping="Wrap"
+                 Text="¥0.00"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Margin="136,133,0,0"
+                 FontSize="16"
+                 TextChanged="BillAmountTextBox_TextChanged"
+                 LostFocus="BillAmountTextBox_LostFocus"
+                 TextAlignment="Right" RenderTransformOrigin="0.501,0.581"/>
+        <Label Content="Percent To Tip" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,161,0,0" FontSize="24"/>
+        <RadioButton Content="10% - Horrible Service"
+                     Tag="0.1"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="146,206,0,0"
+                     GroupName="percent"
+                     Click="RadioButton_Click"/>
+        <RadioButton Content="18% - Acceptable Service"
+                     Tag="0.18"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="146,236,0,0"
+                     GroupName="percent"
+                     Click="RadioButton_Click"
+                     IsChecked="True"/>
+        <RadioButton Content="25% - Great Service"
+                     Tag="0.25"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="146,265,0,0"
+                     GroupName="percent"
+                     Click="RadioButton_Click"/>
+        <Label Content="Amount To Tip" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="464,88,0,0" FontSize="24"/>
+        <Label x:Name="amountToTip" Content="¥0.00" HorizontalAlignment="left" VerticalAlignment="Top" Margin="464,128,0,0" FontSize="20"/>
+        <Label Content="Total Bill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="464,161,0,0" FontSize="24"/>
+        <Label x:Name="totalBill" Content="¥0.00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="464,206,0,0" FontSize="20"/>
+        <Button Content="Done" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" FontSize="16" Margin="256,133,0,0" Click="Button_Click"/>
+
     </Grid>
 </Window>
