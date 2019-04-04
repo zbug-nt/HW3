@@ -19,6 +19,7 @@
                  Margin="136,133,0,0"
                  FontSize="16"
                  TextChanged="BillAmountTextBox_TextChanged"
+                 GotFocus="BillAmountTextBox_GotFocus"
                  LostFocus="BillAmountTextBox_LostFocus"
                  TextAlignment="Right" RenderTransformOrigin="0.501,0.581"/>
         <Label Content="Percent To Tip" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,161,0,0" FontSize="24"/>
@@ -48,7 +49,6 @@
         <Label x:Name="amountToTip" Content="¥0.00" HorizontalAlignment="left" VerticalAlignment="Top" Margin="464,128,0,0" FontSize="20"/>
         <Label Content="Total Bill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="464,161,0,0" FontSize="24"/>
         <Label x:Name="totalBill" Content="¥0.00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="464,206,0,0" FontSize="20"/>
-        <Button Content="Done" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" FontSize="16" Margin="256,133,0,0" Click="Button_Click"/>
 
     </Grid>
 </Window>
